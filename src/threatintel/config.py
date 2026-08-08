@@ -25,6 +25,12 @@ class Settings(BaseSettings):
 
     # --- Output ---
     output_csv: str = "threats.csv"
+    # --- Database ---
+    db_host: str = "localhost"
+    db_port: int = 5432
+    db_name: str = "threatintel"
+    db_user: str = "postgres"
+    db_password: str = "threatintel"
 
     def model_post_init(self, __context) -> None:
         total = self.weight_epss + self.weight_cvss

@@ -7,6 +7,7 @@ from threatintel.scoring import calculate_priority
 from threatintel.sources.nvd import NVDClient
 from threatintel.sources.kev import KEVClient
 from threatintel.sources.epss import EPSSClient
+from threatintel.storage import save_results
 
 logger = logging.getLogger(__name__)
 
@@ -67,7 +68,7 @@ def main() -> None:
         print(f"{priority:5.1f}  {kev_flag}  {cve_id}  EPSS={epss:.3f}  CVSS={cvss:.1f}")
 
     save_csv(results)
-
+    save_results(results)
 
 if __name__ == "__main__":
     main()
