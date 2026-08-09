@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_threat_scores
+    description: "Cleaned per-CVE threat scores, one row per CVE per pipeline run."
+    columns:
+      - name: cve_id
+        description: "CVE identifier, e.g. CVE-2026-66748."
+        tests:
+          - not_null
+      - name: priority
+        description: "Weighted priority score 0-100. KEV overrides to 100."
+        tests:
+          - not_null
+      - name: id
+        description: "Surrogate primary key from the raw threat_scores table."
+        tests:
+          - not_null
+          - unique
+          
