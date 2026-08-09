@@ -1,11 +1,8 @@
-__pycache__/
-*.pyc
-venv/
-.venv/
-.DS_Store
-Thumbs.db
-*.egg-info/
-.pytest_cache/
+
+target/
+dbt_packages/
+logs/
+.env
 # dbt artifacts
 logs/
 threatintel_dbt/target/
