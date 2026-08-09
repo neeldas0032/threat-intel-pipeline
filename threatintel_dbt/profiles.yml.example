@@ -1,0 +1,12 @@
+threatintel_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: ti-postgres
+      port: 5432
+      user: postgres
+      pass: your_password_here
+      dbname: threatintel
+      schema: analytics
+      threads: 4

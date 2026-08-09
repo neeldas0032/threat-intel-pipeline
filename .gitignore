@@ -11,3 +11,6 @@ logs/
 threatintel_dbt/target/
 threatintel_dbt/dbt_packages/
 threatintel_dbt/logs/
+# dbt profile with local DB credentials (container-side)
+threatintel_dbt/profiles.yml
+.user.yml
